@@ -77,6 +77,11 @@ FACEBOOK_PROFILE_IMAGE_PATH = getattr(
 FACEBOOK_CLASS_MAPPING = getattr(
     settings, 'FACEBOOK_CLASS_MAPPING', None)
 
+# Profile Image Dimensions
+# use 'square', 'small', 'normal', 'large'
+# or a tuple of width and height values: (<width>, <height>)
+#
+# see: http://developers.facebook.com/docs/reference/api/using-pictures/#sizes
 FACEBOOK_PROFILE_IMAGE_DIMENSIONS = getattr(
     settings, 'FACEBOOK_PROFILE_IMAGE_DIMENSIONS', 'large'
 )
