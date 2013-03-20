@@ -681,7 +681,10 @@ class OpenFacebook(FacebookConnection):
         Returns the image url from your profile
         '''
         query_dict = QueryDict('', True)
-        if size:
+        if isinstance(size, (tuple, list)) and len(size) == 2:
+            query_dict['width'] = size[0]
+            query_dict['height'] = size[1]
+        elif isinstance(size, basestring):
             query_dict['type'] = size
         query_dict['access_token'] = self.access_token
 
