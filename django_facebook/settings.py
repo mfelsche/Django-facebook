@@ -81,6 +81,11 @@ FACEBOOK_FORCE_PROFILE_UPDATE_ON_LOGIN = getattr(
 FACEBOOK_PROFILE_IMAGE_PATH = getattr(
     settings, 'FACEBOOK_PROFILE_IMAGE_PATH', None)
 
+# Profile Image Dimensions
+# use 'square', 'small', 'normal', 'large'
+# or a tuple of width and height values: (<width>, <height>)
+#
+# see: http://developers.facebook.com/docs/reference/api/using-pictures/#sizes
 FACEBOOK_PROFILE_IMAGE_DIMENSIONS = getattr(
     settings, 'FACEBOOK_PROFILE_IMAGE_DIMENSIONS', 'large'
 )
