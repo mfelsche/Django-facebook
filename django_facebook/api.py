@@ -276,7 +276,9 @@ class FacebookUserConverter(object):
         '''
         if self._profile is None:
             profile = self.open_facebook.me()
-            profile['image'] = self.open_facebook.my_image_url('large')
+            profile['image'] = self.open_facebook.my_image_url(
+                facebook_settings.FACEBOOK_PROFILE_IMAGE_DIMENSIONS
+            )
             profile['image_thumb'] = self.open_facebook.my_image_url()
             self._profile = profile
         return self._profile

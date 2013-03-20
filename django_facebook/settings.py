@@ -77,6 +77,9 @@ FACEBOOK_PROFILE_IMAGE_PATH = getattr(
 FACEBOOK_CLASS_MAPPING = getattr(
     settings, 'FACEBOOK_CLASS_MAPPING', None)
 
+FACEBOOK_PROFILE_IMAGE_DIMENSIONS = getattr(
+    settings, 'FACEBOOK_PROFILE_IMAGE_DIMENSIONS', 'large'
+)
 
 # check for required settings
 required_settings = ['FACEBOOK_APP_ID', 'FACEBOOK_APP_SECRET']
