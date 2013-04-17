@@ -15,7 +15,7 @@ class FacebookBackend(backends.ModelBackend):
         '''
         if facebook_id or facebook_email:
             profile_class = get_profile_class()
-            profile_query = profile_class.objects.all().order_by('user')
+            profile_query = profile_class.objects.filter(user__is_active=True).order_by('user')
             profile_query = profile_query.select_related('user')
             profile = None
 
